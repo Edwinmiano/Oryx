@@ -47,7 +47,7 @@ class _FactsPageWidgetState extends State<FactsPageWidget> {
           onPressed: () async {
             logFirebaseEvent('FACTS_arrow_back_rounded_ICN_ON_TAP');
             logFirebaseEvent('IconButton_Navigate-Back');
-            context.pop();
+            Navigator.pop(context);
           },
         ),
         title: Text(

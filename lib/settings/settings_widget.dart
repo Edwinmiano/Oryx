@@ -2,6 +2,7 @@ import '../flutter_flow/flutter_flow_animations.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
+import '../privacy_policy/privacy_policy_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -342,16 +343,15 @@ class _SettingsWidgetState extends State<SettingsWidget>
                                 logFirebaseEvent(
                                     'SETTINGS_PAGE_Icon_lufonsh9_ON_TAP');
                                 logFirebaseEvent('Icon_Navigate-To');
-
-                                context.pushNamed(
-                                  'privacyPolicy',
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType:
-                                          PageTransitionType.rightToLeft,
-                                    ),
-                                  },
+                                await Navigator.push(
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    duration: Duration(milliseconds: 300),
+                                    reverseDuration:
+                                        Duration(milliseconds: 300),
+                                    child: PrivacyPolicyWidget(),
+                                  ),
                                 );
                               },
                               child: Icon(

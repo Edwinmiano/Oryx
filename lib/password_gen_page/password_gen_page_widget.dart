@@ -47,7 +47,7 @@ class _PasswordGenPageWidgetState extends State<PasswordGenPageWidget> {
           onPressed: () async {
             logFirebaseEvent('PASSWORD_GEN_arrow_back_rounded_ICN_ON_T');
             logFirebaseEvent('IconButton_Navigate-Back');
-            context.pop();
+            Navigator.pop(context);
           },
         ),
         title: Text(

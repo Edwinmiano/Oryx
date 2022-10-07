@@ -60,7 +60,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                           logFirebaseEvent(
                               'PRIVACY_POLICY_arrow_back_rounded_ICN_ON');
                           logFirebaseEvent('IconButton_Navigate-Back');
-                          context.pop();
+                          Navigator.pop(context);
                         },
                       ),
                     ),
